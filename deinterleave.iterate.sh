@@ -16,7 +16,7 @@ mkdir deinterleaved_reads
 for f in interleaved_reads/*
 	do 
 	name=${f##*/}
-  base=${name%.fastq}
+  	base=${name%.fastq}
 	deinterleave.sh < "$f" deinterleaved_reads/"${base}.f.fastq" deinterleaved_reads/"${base}.r.fastq"
 done
 
